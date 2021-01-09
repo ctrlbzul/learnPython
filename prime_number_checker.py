@@ -13,8 +13,15 @@ def prime_number(num_param):
 	else:
 		print(num_param, "is not a prime number")
 
-print("// Prime Numbers Check //")
-print("/////////////////////////\n")
+while True:
+	print("// Prime Numbers Check //")
+	print("/////////////////////////\n")
 
-num = int(input("input a number : "))
-prime_number(num)
+	num = int(input("input a number : "))
+	prime_number(num)
+
+	again = str(input("Use program again ? (y/n): "))
+	if again == "n" or again == "N" or again != "y":
+		break
+
+	print("Thank you..\n")
