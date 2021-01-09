@@ -1,25 +1,32 @@
-print("[ ELIF SIMPLE CALCULATOR ]")
-print("[ OPERATOR : + - * / % ^ ]\n")
+while True:
+	print("[ ELIF SIMPLE CALCULATOR ]")
+	print("[ OPERATOR : + - * / % ^ ]\n")
 
-firstNum = int(input('input first number  : '))
-_operator = input('input operator : ')
-secondNum = int(input('input second number : '))
+	firstNum = int(input('input first number  : '))
+	_operator = input('input operator : ')
+	secondNum = int(input('input second number : '))
 
-if (_operator == '+'):
-	result = firstNum + secondNum
-elif (_operator == '-'):
-	result = firstNum - secondNum
-elif (_operator == '*'):
-	result = firstNum * secondNum
-elif (_operator == '/'):
-	result = float(firstNum / secondNum)
-elif (_operator == '%'):
-	result = firstNum % secondNum
-elif (_operator == '^'):
-	result = firstNum
-else:
-	print('ERROR : unknown operator!')
+	if (_operator == '+'):
+		result = firstNum + secondNum
+	elif (_operator == '-'):
+		result = firstNum - secondNum
+	elif (_operator == '*'):
+		result = firstNum * secondNum
+	elif (_operator == '/'):
+		result = float(firstNum / secondNum)
+	elif (_operator == '%'):
+		result = firstNum % secondNum
+	elif (_operator == '^'):
+		result = firstNum
+	else:
+		print('ERROR : unknown operator!')
+		break
 
-print('result : ', firstNum, _operator, secondNum, ' = ', result)
+	print('result : ', firstNum, _operator, secondNum, ' = ', result)
+	
+	again = str(input("Use program again ? (y/n): "))
+	if again == "n" or again == "N" or again != "y":
+		break
+	print('\n)
 
-print('\nTHANK YOU...')
+print('\nTHANK YOU..\n')
