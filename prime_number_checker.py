@@ -24,4 +24,4 @@ while True:
 	if again == "n" or again == "N" or again != "y":
 		break
 
-	print("Thank you..\n")
+print("Thank you..\n")
