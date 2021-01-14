@@ -8,12 +8,16 @@ os.system('clear')
 print('/ RANDOM BIODATA /')
 
 # generate random day, month, year
-random_day = rd.randint(1, 31)
+random_day = rd.randint(1,31)
 random_month = rd.randint(1,12)
 random_year = rd.randint(1999, 2005)
 
 # generate date of birth
+# if condition to "solve" ValueError: day is out of range for month ehehe :v
+if random_day > 28:
+	random_month = rd.randint(3, 12)
 date_of_birth = dt.date(random_year, random_month, random_day)
+
 # function to get age
 def get_age(born):
 	today = dt.date.today()
