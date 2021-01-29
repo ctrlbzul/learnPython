@@ -12,19 +12,28 @@ print('/// CELCIUS CONVERTER ///')
 print('1. Celcius to Reamur\n2. Celcius to Fahrenheit\n3. Celcius to Kelvin')
 print('/////////////////////////\n')
 
-# input celcius value
-c_value = float(input('Input temperature in Celcius : '))
+while True:
+	# input celcius value
+	c_value = float(input('Input temperature in Celcius\t: '))
 
-#convert the celcius value
-converter = input('Choose converter (1/2/3) : ')
-if converter == '1':
-  toReamur(c_value)
-elif converter == '2':
-  toFahrenheit(c_value)
-elif converter == '3':
-  toKelvin(c_value)
-else:
-  print('PLEASE CHOOSE BETWEEN 1-3!')
+	#convert the celcius value
+	converter = input('Choose converter (1/2/3)\t: ')
+	if converter == '1':
+		toReamur(c_value)
+	elif converter == '2':
+		toFahrenheit(c_value)
+	elif converter == '3':
+		toKelvin(c_value)
+	else:
+		print('PLEASE CHOOSE BETWEEN 1-3!')
+
+	print("--------------------------------------------------")
+	again = str(input("Get factorial again ?(y/n)\t: "))
+	if again == "n" or again == "N":
+		break
+
+print("Thanks :)")
+
   
 
 
