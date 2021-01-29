@@ -1,32 +1,36 @@
-while True:
-	print("[ ELIF SIMPLE CALCULATOR ]")
-	print("[ OPERATOR : + - * / % ^ ]\n")
+# import math module (for pow function)
+import math
 
+print("[ ELIF SIMPLE CALCULATOR ]")
+print("[ OPERATOR : + - * / % ^ ]\n")
+print("--------------------------------------")
+
+while True:
 	firstNum = int(input('input first number  : '))
 	_operator = input('input operator : ')
 	secondNum = int(input('input second number : '))
 
 	if (_operator == '+'):
-		result = firstNum + secondNum
+		result = firstNum + secondNum # addition
 	elif (_operator == '-'):
-		result = firstNum - secondNum
+		result = firstNum - secondNum # substraction
 	elif (_operator == '*'):
-		result = firstNum * secondNum
+		result = firstNum * secondNum # multiplication
 	elif (_operator == '/'):
-		result = float(firstNum / secondNum)
+		result = float(firstNum / secondNum) # division
 	elif (_operator == '%'):
-		result = firstNum % secondNum
+		result = firstNum % secondNum # modulo
 	elif (_operator == '^'):
-		result = firstNum
+		result = math.pow(firstNum, secondNum) # power
 	else:
 		print('ERROR : unknown operator!')
 		break
 
 	print('result : ', firstNum, _operator, secondNum, ' = ', result)
 	
-	again = str(input("Use program again ? (y/n): "))
-	if again == "n" or again == "N" or again != "y":
+	print("--------------------------------------------------")
+	again = str(input("Calculate again ?(y/n) : "))
+	if again == "n" or again == "N":
 		break
-	print('\n)
 
-print('\nTHANK YOU..\n')
+print("Thanks :)")
