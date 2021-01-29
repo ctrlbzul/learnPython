@@ -1,7 +1,7 @@
 import calendar
-import datetime
+from datetime import datetime
 
-now = datetime.datetime.now()
+now = datetime.now()
 today = int(now.strftime("%d"))
 now_month = int(now.strftime("%m"))
 now_year = int(now.strftime("%Y"))
@@ -17,7 +17,7 @@ def count_age(day_input, month_input, year_input):
     print('YOUR BIRTHDAY HAS PASSED.')
   else:
     your_age = now_year - year_input - 1
-    print("You are ", your_age, "year old.")
+    print("YOU ARE", your_age, "YEARS OLD.")
 
 day = int(input("Input your birth day (1-31): "))
 month = int(input("Innput your birth month (1-12) : "))
