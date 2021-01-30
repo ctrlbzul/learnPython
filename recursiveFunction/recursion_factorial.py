@@ -1,11 +1,11 @@
-# get factorial with recursive function
+# recursive function to find factorial of a number
 def factorial(num_param):
 	if num_param == 1:
 		return 1
 	else:
 		return (num_param * factorial(num_param - 1))
 
-# ask to run program more than once
+# while loop (to use program more than once)
 while True:
 	try:
 		num = int(input("Get factorial of : "))
