@@ -1,13 +1,16 @@
 # recursive addition, example :
 # num1 = 1, num2 = 3 ===> 1+2+3 = 6
+
+# function to recursive addition
 def recursive_addition(num1_param, num2_param):
 	if num1_param == num2_param:
 		return num2_param
 	else:
 		return (num1_param + recursive_addition(num1_param+1, num2_param))
 
-# ask to run program more than once
+# while loop (to use program more than once)
 while True:
+	
 	try:
 		num1 = int(input("First number\t: "))
 		num2 = int(input("Second number\t: "))
