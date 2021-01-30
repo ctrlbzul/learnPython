@@ -1,8 +1,8 @@
-# memanfaatkan fungsi math.ceil()
-# untuk membulatkan bilangan ke atas
+# import math module to get math.ceil function
 import math
 
-e = 95 # e = public key dan d = private ke
+# e = public key dan d = private ke
+e = 95
 totient_n = 448 # ɸ(n)
 
 # ds = nilai d sementara, jika memenuhi syarat maka nilai ds menjadi nilai d.
