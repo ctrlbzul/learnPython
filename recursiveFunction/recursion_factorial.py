@@ -8,14 +8,14 @@ def factorial(num_param):
 # while loop (to use program more than once)
 while True:
 	try:
-		num = int(input("Get factorial of : "))
+		num = int(input("Get factorial of\t: "))
 		print("The factorial of", num, "is", factorial(num))
 	except:
 		print("Input integer only!")
 		break
 
 	print("--------------------------------------------------")
-	again = str(input("Get factorial again ?(y/n) : "))
+	again = str(input("Get factorial again ?(y/n)\t: "))
 	if again == "n" or again == "N":
 		break
 
