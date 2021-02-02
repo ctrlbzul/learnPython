@@ -8,7 +8,7 @@ def toThePowerOf(base_param, exponent_param):
 	else:
 		return (base_param * (toThePowerOf(base_param, exponent_param - 1)))
 
-print('// POWER RAISE //')
+print('// POWER RAISE A NUMBER //')
 # while loop (to use program more than once)
 while True:
 
