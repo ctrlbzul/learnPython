@@ -5,7 +5,7 @@
 num1 = 4.5
 num2 = 6.7
 
-# # to take the input from the user
+# # uncomment below to take the input from the user
 # num1 = input('Enter first number\t: ')
 # num2 = input('Enter second number\t: ')
 
