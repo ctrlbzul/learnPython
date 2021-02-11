@@ -11,7 +11,7 @@ print('%0.2f kilometers is equal to %0.2f miles' %(kilometers, miles))
 
 # MODIFIED ABOVE PROGRAM : MILES TO KILOMETERS
 # uncomment code below to convert miles to kilometers
-# # taking miles input form user
+# # taking miles input from user
 # miles = float(input('Enter value in miles\t: '))
 
 # # conversion factor
