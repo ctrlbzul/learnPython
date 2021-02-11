@@ -1,9 +1,13 @@
 # import math module (for pow function)
 import math
 
+# print straight line
+def printLine():
+	print("--------------------------------------")
+
 print("[ ELIF SIMPLE CALCULATOR ]")
-print("[ OPERATOR : + - * / % ^ ]\n")
-print("--------------------------------------")
+print("[ OPERATOR : + - * / % ^ ]")
+printLine()
 
 while True:
 	firstNum = int(input('input first number  : '))
@@ -26,9 +30,9 @@ while True:
 		print('ERROR : unknown operator!')
 		break
 
-	print('result : ', firstNum, _operator, secondNum, ' = ', result)
+	print('{0} {1} {2} = {3}'.format(firstNum, _operator, secondNum, result))
 	
-	print("--------------------------------------------------")
+	printLine()
 	again = str(input("Calculate again ?(y/n) : "))
 	if again == "n" or again == "N":
 		break
