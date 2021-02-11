@@ -13,4 +13,4 @@ print('----------------------------\n')
 my_string = str(input('Input the string\t: '))
 
 # print reversed string
-print('Reversed string\t\t:', reverse_string(my_string))
+print('Reversed string\t\t: {0}'.format(reverse_string(my_string)))
