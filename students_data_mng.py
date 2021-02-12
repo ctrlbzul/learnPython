@@ -1,11 +1,15 @@
-print("STUDENTS DATA MANAGEMENT")
-print("=========================")
+# function to print a straight line
+def printLine():
+	print('---------------------------------------------')
 
+print("// STUDENTS DATA MANAGEMENT //")
+printLine()
 print("Manage Data :\n1. Create file\n2. Read file\n3. Write file")
 choice = str(input("Input choice (1/2/3) : "))
+printLine()
 
 if choice == "1":
-	print("\n/ CREATE FILE /")
+	print("/ CREATE FILE /")
 	while True:
 		# create a new file
 		file_name = str(input("File's name (without .txt): "))
@@ -25,18 +29,19 @@ if choice == "1":
 	print("File's created.")
 
 elif choice == "2":
-	print("\n/ READ FILE /")
+	print("/ READ FILE /")
 	# open file
 	read_file = str(input("Input file's name (.txt) : "))
 	# "r" - Read - open file for reading
 	file_to_read = open(read_file, "r")
-
-	print("Opening file : ", read_file, "\n")
-	print("\n= " + read_file.upper() + " =")
+	print('Opening file : {0}'.format(read_file))
+	
+	printLine()
+	print('= {0} ='.format(read_file))
 	print(file_to_read.read())
 	file_to_read.close()
 elif choice == "3":
-	print("\n/ WRITE FILE /")
+	print("/ WRITE FILE /")
 	write_file = str(input("Input file's name (.txt) : "))
 	# "a" - Append - will append to the end of the file
 	file_to_write = open(write_file, "a")
@@ -47,12 +52,8 @@ elif choice == "3":
 		file_to_write.write("\n" + data)
 	
 # open and read the file after the wrote data :
-	print("\n= " + write_file.upper() + " =")
+	printLine()
+	print(' = {0} ='.format(write_file))
 	file_to_write = open(write_file, "r")
 	print(file_to_write.read())
 	file_to_write.close()
-
-
-
-
-
