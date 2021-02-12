@@ -12,8 +12,7 @@ for i in range(0, count):
 	prices.append(item_price)
 
 # print menu's name
-print('\n// ' + menu_name + ' //')
+print('\n// {0} //'.format(menu_name))
 # print menu items name and price per line
 for i, j in zip(names, prices):
-	print(f"{i:>10}", end='')
-	print(f"{j:>10}", end='\n')
+  print('{0:<12}\t{1:>12}'.format(i,j))
