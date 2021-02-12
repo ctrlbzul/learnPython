@@ -4,7 +4,7 @@ def pattern(n_param):
 	# outer i loop to handle number of rows (n)
 	for i in range(0, n_param):
 
-		# inner loop to handle number of columns
+		# innet loop to handle number of columns
 		# values changing according to outer loop
 		for j in range(0, i+1):
 			# printing stars
@@ -15,7 +15,7 @@ def pattern(n_param):
 
 # take input
 n = int(input('Number of n\t: '))
-print('\n', end='') # linebreak
+print('------------------------------')
 # assign n to function
 pattern(n)
 
