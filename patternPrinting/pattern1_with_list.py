@@ -7,7 +7,7 @@ def pattern(n_param):
 
 # take input
 n = int(input('Number of n\t: '))
-print('\n', end='') # linebreak
+print('------------------------------')
 # assign n to function
 pattern(n)
 
