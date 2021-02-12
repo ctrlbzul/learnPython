@@ -30,7 +30,7 @@ if choice == "1":
 
 elif choice == "2":
 	print("/ READ FILE /")
-	# open file
+	# open file (use students_data.txt file for example)
 	read_file = str(input("Input file's name (.txt) : "))
 	# "r" - Read - open file for reading
 	file_to_read = open(read_file, "r")
@@ -42,6 +42,7 @@ elif choice == "2":
 	file_to_read.close()
 elif choice == "3":
 	print("/ WRITE FILE /")
+	# write file (use students_data.txt file for example)
 	write_file = str(input("Input file's name (.txt) : "))
 	# "a" - Append - will append to the end of the file
 	file_to_write = open(write_file, "a")
