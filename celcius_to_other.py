@@ -37,6 +37,7 @@ while True:
 		print('PLEASE CHOOSE BETWEEN 1-3!')
 
 	printLine()
+	# ask for programs loop
 	again = str(input("Convert celcius again ?(y/n)\t: "))
 	if again == "n" or again == "N":
 		break
