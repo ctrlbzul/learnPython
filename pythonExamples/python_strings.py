@@ -60,7 +60,7 @@ def splitString(string_param):
   return string_param.split()
 
 # MAIN DISPLAY
-print('// STRING MANIPULATION //')
+print('// PYTHON EXAMPLE : STRINGS //')
 printLine()
 showMenu()
 
