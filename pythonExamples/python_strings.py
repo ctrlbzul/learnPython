@@ -1,4 +1,4 @@
-# string manipulation program
+# PYTHON EXAMPLE : STRINGS
 
 # funtion : show menu
 def showMenu():
