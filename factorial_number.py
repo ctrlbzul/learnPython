@@ -1,28 +1,53 @@
+# Python 3 program to find factorial of given number
+	
 # factorial is written with ! (ex : factorial of 5 = 5!)
-def factorialValue(num_param):
-	factorial = 1
+def factorial(n_param):
+  # uncomment code below to use factorial function with recursive
+  # if n_param < 0:
+  #   return 0
+  # elif n_param == 0 or n_param == 1:
+  #   return 1
+  # else:
+  #   return n_param * factorial(n_param - 1)
 
-	# uncomment to use factorial function with while loops
-	# i = 1
-	# while i <= number:
-	# 	result*=i
-	# 	i+=1
+	# uncomment code below to use factorial function with while loops
+  # fact = 1
+  # i = 1
+  # while (i <= n_param):
+  #   fact *= i
+  #   i += 1
+  # return fact
 
-	# with for loops
-	if num_param < 0:
-		print("ERROR : Factorial does'nt exist for NEGATIVE NUMBERS")
-	elif num_param == 0:
-		print("0! = 1")
-	else:
-		for i in range(1, num_param+1): # factorial+1 for end value
-			factorial *= i
-			# i += 1
-		print("{0}! = {1} (factorial of {2} is {3})".format(num_param, factorial, num_param, factorial))
+	# uncomment code below to use factorial function with iterative
+	# def factorial(n_param):
+	#   if n_param < 0:
+	#     return 0
+	#   elif n_param == 0 or n_param == 1:
+	#     return 1
+	#   else:
+	#     fact = 1
+	#     while (n_param > 1):
+	#       fact *= n_param
+	#       n_param -=1
+	#     return fact
+
+	# uncomment code below to use factorial function with for loops
+	# if n_param < 0:
+	# 	return 0
+	# elif n_param == 0 or n_param == 1:
+	# 	return 1
+	# else:
+	# 	for i in range(1, n_param+1): # factorial+1 for end value
+	# 		fact *= i
+	# 		# i += 1
+	# 	return fact
 
 while True:
-	num = int(input("Enter an integer number : "))
-	factorialValue(num)
-	print('-----------------------------------')
+	# given number
+	n = int(input("Enter an integer number : "))
+	print(f'Factorial of {n} is {factorial(n)}')
+	print('----------------------------------------')
+	
 	# ask for program's loop
 	again = str(input("Use program again ? (y/n): "))
 	if again == "n" or again == "N" or again != "y":
