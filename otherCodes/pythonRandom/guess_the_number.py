@@ -16,24 +16,31 @@ def playerGuess(min_num, max_num):
 	function : asks the player to guess a number.
 	return user_input
 	'''
-	user_input = int(input(f'Guess the number between {min_num} and {max_num} : '))
+	# user_input = int(input(f'Guess the number between {min_num} and {max_num} : '))
 	# check for user errors
 	while True:
-		if isinstance(user_input, int) and user_input in range(min_num, max_num+1):
-			break
-		elif user_input not in range(min_num, max_num + 1):
-			user_input = int(input(f'Please, input the number betwween {min_num} and {max_num} : '))
+		try:
+			user_input = int(input(f'Guess the number between {min_num} and {max_num} : '))
+			# check if input is an integer and within the range
+			if isinstance(user_input, int) and user_input in range(min_num, max_num+1):
+				break
+			elif user_input not in range(min_num, max_num + 1):
+				user_input = int(input(f'Please, input the number between {min_num} and {max_num} : '))
+		except:
+			user_input = int(input(f'Please, input integer only : '))
 			
-		# not yet handling string input
-	
 	return user_input
 
 def play():
 	print('>> GUESS THE NUMBER')
 	printLine()
+
 	# define guessing range
 	low = 0
 	high = 5
+	# if player wanna decide the guessing range.
+	# low = int(input('Input low guessing range : '))
+	# high = int(input('Input high guessing range : '))
 
 	computer_choice = computerNumber(low, high)
 	player_choice = playerGuess(low, high)
