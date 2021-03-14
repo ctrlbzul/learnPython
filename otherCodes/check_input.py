@@ -30,9 +30,16 @@ def isStringOrNum(check_input):
 		return(f'is the input both letters and/or numbers ? True')
 	return(f'is the input both letters and/or numbers ? False')
 
+# check if user input is integers
+def isDigit(check_input):
+	if check_input.isdigit():
+		return(f'is the input an integer ? True')
+	return(f'is the input an integer ? False')
+
 # user input
 user_input = input('Type here : ')
 print(f'''{isStringOnly(user_input)}\
 	\n{isStringWithSpace(user_input)}\
-	\n{isStringOrNum(user_input)}''')
+	\n{isStringOrNum(user_input)}\
+	\n{isDigit(user_input)}''')
 	
