@@ -36,10 +36,20 @@ def isDigit(check_input):
 		return(f'is the input an integer ? True')
 	return(f'is the input an integer ? False')
 
+# check if user input is a floating point
+def isFloat(check_input):
+	if '.' in check_input:
+		split_num = check_input.split('.')
+		if len(split_num) == 2 and split_num[0].isdigit() and split_num[1].isdigit():
+			return(f'is it a float and float only ? True')
+	return(f'is it a float and float only ? False')
+	
+
 # user input
 user_input = input('Type here : ')
 print(f'''{isStringOnly(user_input)}\
 	\n{isStringWithSpace(user_input)}\
 	\n{isStringOrNum(user_input)}\
-	\n{isDigit(user_input)}''')
+	\n{isDigit(user_input)}\
+	\n{isFloat(user_input)}''')
 	
