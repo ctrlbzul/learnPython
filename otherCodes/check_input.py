@@ -1,55 +1,73 @@
-'''
-check for these input :
-1. HelloWorld (all letters, nothing more, nothing less)
-2. Hello World (pay attention to the space)
-3. HelloWorld123 (both letters and/or numbers)
-4. 123 (pure number, int)
-5. 12.2 (floating point)
-'''
+from random import randint
 
-# check if user input is all letters (alpha)
-def isStringOnly(check_input):
-	if check_input.isalpha():
-		return(f'is the input all letters ? True')
-	return(f'is the input all letters ? False')
+def printLine():
+	# function : print a straight line
+	print('--------------------------------------------------')
 
-# check if user input is all letters and contain any spaces
-def isStringWithSpace(check_input):
-	valid = False
-	if ' ' in check_input:
-		for letter in check_input:
-			if letter.isdigit():
-				valid = False
-			elif letter.isalpha() or letter.isspace():
-				valid = True
-	return (f'is the input all letters with a space or two ? {valid}')
+def computerNumber(min_num, max_num):
+	'''
+	function : generates a random number based on the args (min_num, max_num).
+	return random int
+	'''
+	return randint(min_num, max_num)
 
-# check if user input is both letters and/or numbers
-def isStringOrNum(check_input):
-	if check_input.isalnum():
-		return(f'is the input both letters and/or numbers ? True')
-	return(f'is the input both letters and/or numbers ? False')
+def playerGuess(min_num, max_num):
+	'''
+	function : asks the player to guess a number.
+	return user_input
+	'''
+	user_input = input(f'Guess the number between {min_num} and {max_num} : ')
 
-# check if user input is integers
-def isDigit(check_input):
-	if check_input.isdigit():
-		return(f'is the input an integer ? True')
-	return(f'is the input an integer ? False')
+	# check for user input error
+	while True:
+		# check if input is an integer and within the range
+		if user_input.isdigit():
+			if int(user_input) in range(min_num, max_num + 1):
+				break
+			elif int(user_input) not in range(min_num, max_num + 1):
+				user_input = input(f'Please, input the number between {min_num} and {max_num} : ')
+		else:
+			print(f'Error : please input an integer!')
+			user_input = input(f'Guess the number between {min_num} and {max_num} : ')
+			
+	input_result = int(user_input)
+	return input_result
 
-# check if user input is a floating point
-def isFloat(check_input):
-	if '.' in check_input:
-		split_num = check_input.split('.')
-		if len(split_num) == 2 and split_num[0].isdigit() and split_num[1].isdigit():
-			return(f'is it a float and float only ? True')
-	return(f'is it a float and float only ? False')
-	
+# MAIN CODE
+print('>> GUESS THE NUMBER')
+printLine()
 
-# user input
-user_input = input('Type here : ')
-print(f'''{isStringOnly(user_input)}\
-	\n{isStringWithSpace(user_input)}\
-	\n{isStringOrNum(user_input)}\
-	\n{isDigit(user_input)}\
-	\n{isFloat(user_input)}''')
-	
+# define guessing range
+low = 0
+high = 7
+
+# if player wanna decide the guessing range.
+# low = int(input('Input low guessing range : '))
+# high = int(input('Input high guessing range : '))
+
+computer_choice = computerNumber(low, high)
+player_choice = playerGuess(low, high)
+
+# loop until player guesses the right number.
+# while computer_choice != player_choice:
+# chance
+tired = 0
+while True:
+	# if guessed number wrong 3 times, ask for quit
+	if tired == 3:
+		give_up = input('Tired of guessing ? Wanna quit ? (y/n) : ')
+		if give_up == 'y' or give_up == 'Y':
+			print(f'You are giving up. The right number is {computer_choice}.')
+			break
+
+	if player_choice > computer_choice:
+		player_choice = int(input('Number is too high, try again\t: '))
+		tired += 1
+	elif player_choice < computer_choice:
+		player_choice = int(input('Number is too low, try again\t: '))
+		tired += 1
+	else:
+		# if player guesses the right number, out from while loop
+		printLine()
+		print(f'CONGRATULATIONS! You guess the right number : {computer_choice}.')
+		break
