@@ -4,16 +4,6 @@ def printLine():
 	# function : print a straight line
 	print('--------------------------------------------------')
 
-# def isDigit(check_input):
-# 	'''
-# 	function : check if input is integers or not
-# 	return : bool
-# 	'''
-# 	if check_input.isdigit():
-# 		return True
-# 	return False
-
-
 def computerNumber(min_num, max_num):
 	'''
 	function : generates a random number based on the args (min_num, max_num).
@@ -30,8 +20,8 @@ def playerGuess(min_num, max_num):
 
 	# check for user input error
 	while True:
+		# check if input is an integer and within the range
 		if user_input.isdigit():
-			# check if input is an integer and within the range
 			if int(user_input) in range(min_num, max_num + 1):
 				break
 			elif int(user_input) not in range(min_num, max_num + 1):
@@ -49,7 +39,7 @@ printLine()
 
 # define guessing range
 low = 0
-high = 5
+high = 7
 
 # if player wanna decide the guessing range.
 # low = int(input('Input low guessing range : '))
@@ -59,12 +49,25 @@ computer_choice = computerNumber(low, high)
 player_choice = playerGuess(low, high)
 
 # loop until player guesses the right number.
-while computer_choice != player_choice:
+# while computer_choice != player_choice:
+# chance
+tired = 0
+while True:
+	# if guessed number wrong 3 times, ask for quit
+	if tired == 3:
+		give_up = input('Tired of guessing ? Wanna quit ? (y/n) : ')
+		if give_up == 'y' or give_up == 'Y':
+			print(f'You are giving up. The right number is {computer_choice}.')
+			break
+
 	if player_choice > computer_choice:
 		player_choice = int(input('Number is too high, try again\t: '))
+		tired += 1
 	elif player_choice < computer_choice:
 		player_choice = int(input('Number is too low, try again\t: '))
-
-# if player guesses the right number
-printLine()
-print(f'CONGRATULATIONS! You guess the right number : {computer_choice}')
+		tired += 1
+	else:
+		# if player guesses the right number, out from while loop
+		printLine()
+		print(f'CONGRATULATIONS! You guess the right number : {computer_choice}.')
+		break
