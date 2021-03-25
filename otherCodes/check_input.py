@@ -1,16 +1,13 @@
-# function : check is input an integer or not
 def isInteger(check_input):
   if check_input.isdigit():
     return True
   return False
 
-# function : check is input a string or not
 def isString(check_input):
   if check_input.isalpha():
     return True
   return False
 
-# function : check is input a float or not
 def isFloat(check_input):
   if '.' in check_input:
     split_input = check_input.split('.')
