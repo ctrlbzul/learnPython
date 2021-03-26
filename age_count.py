@@ -30,7 +30,7 @@ day = int(input("Input your birth day (1-31): "))
 month = int(input("Input your birth month (1-12) : "))
 year = int(input("Input your birth year : "))
 
-# get month name by an integer
+# get month name by given integer (month)
 monthName = calendar.month_name[month]
 
 # print the output
