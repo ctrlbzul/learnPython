@@ -64,5 +64,5 @@ while True:
 		jawaban_user = input('Jawaban salah, coba lagi : ')
 		kesempatan +=1
 		if kesempatan == 3:
-			print(f'>> Anda gagal.\ngitu aja gabisa tol aowawkwkw : {kunci}')
+			print(f'>> Anda gagal.\Jawaban yang benar : {kunci}')
 			break
