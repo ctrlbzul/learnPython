@@ -10,6 +10,17 @@ def sumArray(array):
   return sum
 
 '''
+function : print array elements with plus sign (+)
+return string
+'''
+def arrayPlusSign(array):
+  string_array = map(str, array)
+
+  plus_sign = ' + '
+  plus_sign = plus_sign.join(string_array)
+  return plus_sign
+
+'''
 function : print a straight line
 return string
 '''
@@ -32,4 +43,4 @@ sum_of_array = sumArray(arr)
 array_length = len(arr)
 
 # print length and sum of array
-print(f'Array\t: {arr}\nLength\t: {array_length}\nSum\t: \nSum of array : {sum_of_array}')
+print(f'Array\t: {arr}\nLength\t: {array_length}\nSum\t: {arrayPlusSign(arr)}\nSum of array : {sum_of_array}')
