@@ -1,23 +1,35 @@
-# python 3 code to find sum of elements in given array 
-
-# function : iterate through the array and add each element to the sum variable
+'''
+function : iterate through the array and add each element to the sum variable
+return int (sum)
+'''
 def sumArray(array):
   # variable to store sum of array
   sum = 0
-
   for i in array:
     sum += i
   return sum
 
-# initiate array
-arr = []
-# input values to array
-arr = [15, 12, 13, 10]
+'''
+function : print a straight line
+return string
+'''
+def printLine():
+  return(f'----------------------------------------')
 
+# initiate array (empty list)
+print(f'// SUM OF ARRAY //\n{printLine()}')
+arr = []
+# ask user input for array elements
+count = int(input('Element count : '))
+for i in range(0, count):
+  elements = int(input(f'Input element [{i}] : '))
+  arr.append(elements)
+
+print(f'{printLine()}')
 # get sum of array
 sum_of_array = sumArray(arr)
 # calculate length of array
 array_length = len(arr)
 
 # print length and sum of array
-print(f'Array : {arr}\nLength : {array_length}\nSum of array is : {sum_of_array}')
+print(f'Array\t: {arr}\nLength\t: {array_length}\nSum\t: \nSum of array : {sum_of_array}')
